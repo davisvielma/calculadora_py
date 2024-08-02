@@ -1,6 +1,6 @@
 from colorama import Fore, Style
 from paquetes.interfazConsola.consola import menu, pedir_int, pedir_float, mostrar_resultado
-from paquetes.operacionesBasicas.operaciones import sumar, restar
+from paquetes.operacionesBasicas.operaciones import sumar, restar, multiplicar, dividir
 
 def main() -> None:
 	"""
@@ -35,10 +35,17 @@ def main() -> None:
 
 				mostrar_resultado(resultado)
 			elif opcion == 3:
-				print(333)
-			elif opcion == 4:
-				print(444)
+				num1 = pedir_float('\n*Escriba el primer numero a multiplicar: ')
+				num2 = pedir_float('*Escriba el segundo numero a multiplicar: ')
+				resultado = multiplicar(num1, num2)
 
+				mostrar_resultado(resultado)
+			elif opcion == 4:
+				num1 = pedir_float('\n*Escriba el numerador: ')
+				num2 = pedir_float('*Escriba el denominador: ')
+				resultado = dividir(num1, num2)
+
+				mostrar_resultado(resultado)
 		except ValueError as e:
 			print(Fore.RED)
 			print(f'Error!!! {e}.')
