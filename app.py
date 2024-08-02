@@ -1,6 +1,6 @@
 from colorama import Fore, Style
 from paquetes.interfazConsola.consola import menu, pedir_int, pedir_float, mostrar_resultado
-from paquetes.operacionesBasicas.operaciones import sumar
+from paquetes.operacionesBasicas.operaciones import sumar, restar
 
 def main() -> None:
 	"""
@@ -29,7 +29,11 @@ def main() -> None:
 
 				mostrar_resultado(resultado)
 			elif opcion == 2:
-				print(222)
+				num1 = pedir_float('\n*Escriba el primer numero a restar: ')
+				num2 = pedir_float('*Escriba el segundo numero a restar: ')
+				resultado = restar(num1, num2)
+
+				mostrar_resultado(resultado)
 			elif opcion == 3:
 				print(333)
 			elif opcion == 4:
