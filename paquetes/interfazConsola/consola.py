@@ -9,10 +9,9 @@ def menu() -> None:
 	print('5) Salir.')
 
 
-def pedir_numero(mensaje: str) -> int:
-	numero = input(mensaje)
-
-	if not numero.isdigit():
-		raise ValueError('Ingrese un numero positivo')
-
-	return int(numero)
+def pedir_int(mensaje: str) -> int:
+	try:
+		numero = int(input(mensaje))
+		return numero
+	except ValueError as e:
+		raise ValueError('Ingrese una opcion valida')

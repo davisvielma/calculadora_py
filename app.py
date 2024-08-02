@@ -1,5 +1,5 @@
 from colorama import Fore, Style
-from paquetes.interfazConsola.consola import menu, pedir_numero
+from paquetes.interfazConsola.consola import menu, pedir_int
 
 def main() -> None:
 	"""
@@ -16,7 +16,7 @@ def main() -> None:
 	while opcion != rango_superior:
 		try:
 			menu()
-			opcion = pedir_numero('*Elija una opcion: ')
+			opcion = pedir_int('*Elija una opcion: ')
 
 			if opcion < rango_inferior or opcion > rango_superior:
 				raise ValueError(f'Ingrese una opcion entre {rango_inferior} y {rango_superior}')
