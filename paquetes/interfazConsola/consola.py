@@ -15,3 +15,13 @@ def pedir_int(mensaje: str) -> int:
 		return numero
 	except ValueError as e:
 		raise ValueError('Ingrese una opcion valida')
+
+def pedir_float(mensaje: str) -> float:
+	try:
+		numero = float(input(mensaje))
+		return numero
+	except ValueError as e:
+		raise ValueError('Ingrese una numero valido')
+
+def mostrar_resultado(res: float) -> None:
+	print('El resultado es: ' + Fore.GREEN + f'{res:.2f}')
