@@ -3,11 +3,6 @@ from paquetes.interfazConsola.consola import menu, pedir_int, pedir_float, mostr
 from paquetes.operacionesBasicas.operaciones import sumar, restar, multiplicar, dividir
 
 def main() -> None:
-	"""
-	print(Fore.WHITE + 'Pueba con color blanco')
-	print(Fore.BLUE + f'Pueba con color azul al numero {35}')
-	print(Style.RESET_ALL + 'Reestablecido el estilode letra or defecto')
-	"""
 	opcion = 0
 	rango_inferior = 1
 	rango_superior = 5
